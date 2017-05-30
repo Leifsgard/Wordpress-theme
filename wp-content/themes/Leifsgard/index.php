@@ -26,25 +26,11 @@ get_header(); ?>
 						<h1>Rasmus Leifsgård <span>UI & UX Designer </span></h1>
 					</header>
 					<div class="main clearfix">
-						<div class="column">
-							<p><button id="showMenu">Navigate the menu</button></p>
-							<p>Click on this button to see the menu</p>
-						</div>
-						<div class="column">
-							<nav class="codrops-demos">
-								<!---<a href="index6.html" >Lay Down</a>-->
-							</nav>
-						</div>
-						<div class="related">
-							<p>If you enjoyed this demo you might also like:</p>
-							<p><a href="http://tympanus.net/Tutorials/AnimatedBorderMenus/">Animated Border Menus</a></p>
-							<p><a href="http://tympanus.net/Development/SidebarTransitions/">Transitions for Off-Canvas Navigations</a></p>
-						</div>
 					</div><!-- /main -->
 				</div><!-- wrapper -->
 			</div><!-- /container -->
 			<nav class="outer-nav right vertical">
-			<p>Rasmus Leifsgard <span><br>UI & UX Designer </span></p>
+			
 			<?php
 			wp_nav_menu( array( 'theme_location' => 'top', 'container_class' => 'menu' ) );
 			?>
@@ -71,6 +57,4 @@ get_header(); ?>
 						<?php endif; ?>
 			</nav>
 		</div><!-- /perspective -->
-		<script src="js/classie.js"></script>
-		<script src="js/menu.js"></script>
 <?php get_footer();

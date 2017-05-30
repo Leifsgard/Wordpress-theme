@@ -1,6 +1,6 @@
 /*
-Theme Name: Leifsgard 
-Description: A personal theme for my website
+Theme Name: Twenty Seventeen
+Description: Used to style the TinyMCE editor.
 */
 
 
@@ -15,7 +15,6 @@ Description: A personal theme for my website
  * 6.0 - Galleries
  * 7.0 - Media Elements
  * 8.0 - RTL
- * 9.0 - Header
  */
 
 /**
@@ -598,11 +597,4 @@ object {
 
 .rtl .mejs-offscreen {
 	right: -10000px;
-}
-/**
- * 9.0 - RTL
- */
-ul#menu-meny {
-    /* list-style-type: none; */
-    list-style-type: none;
 }

@@ -403,18 +403,29 @@ function twentyseventeen_colors_css_wrap() {
 	</style>
 <?php }
 add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
-
+wp_enqueue_script( 'modernizr', get_theme_file_uri( '/assets/js/modernizr.custom.25376.js' ));
+wp_enqueue_script( 'classie', get_theme_file_uri( '/assets/js/classie.js' ));
 /**
  * Enqueue scripts and styles.
  */
-function twentyseventeen_scripts() {
+function leifsgard_scripts() {
 	
+	// MENU SCRIPT
+	wp_enqueue_script( 'menu', get_theme_file_uri( '/assets/js/menu.js' ));
+	
+	
+	
+	
+	
+	wp_enqueue_style( 'demo', get_theme_file_uri( '/assets/css/demo.css' ), array());
+	wp_enqueue_style( 'normalize', get_theme_file_uri( '/assets/css/normalize.css' ), array());
+	wp_enqueue_style( 'component', get_theme_file_uri( '/assets/css/component.css' ), array());
 	
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'twentyseventeen-fonts', twentyseventeen_fonts_url(), array(), null );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'twentyseventeen-style', get_stylesheet_uri() );
+
 
 	// Load the dark colorscheme.
 	if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
@@ -459,7 +470,7 @@ function twentyseventeen_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
+add_action( 'wp_enqueue_scripts', 'leifsgard_scripts' );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
