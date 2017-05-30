@@ -16,24 +16,46 @@
  */
 
 get_header(); ?>
-
-<div id="perspective" class="perspective effect-moveleft">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load --> 
+		<script src="js/modernizr.custom.25376.js"></script>
+<div id="perspective" class="perspective effect-airbnb">
 			<div class="container">
 				<div class="wrapper"><!-- wrapper needed for scroll -->
 					<!-- Top Navigation -->
-					
+					<div class="codrops-top clearfix">
+						<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/ProgressButtonStyles/"><span>Previous Demo</span></a>
+						<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=17915"><span>Back to the Codrops Article</span></a></span>
+					</div>
 					<header class="codrops-header">
-						<h1>Rasmus Leifsgård <span>UI & UX Designer </span></h1>
+						<h1>Perspective Page View Navigation <span>Transforms the page in 3D to reveal a menu</span></h1>	
 					</header>
 					<div class="main clearfix">
+						<div class="column">
+							<p><button id="showMenu">Show Menu</button></p>
+							<p>Click on this button to see the content being pushed away in 3D to reveal a navigation or other items.</p>
+						</div>
+						<div class="column">
+							<nav class="codrops-demos">
+								<a href="index.html" class="current-demo">Airbnb Effect</a>
+								<a href="index2.html">Move Left</a>
+								<a href="index3.html">Rotate Left</a>
+								<a href="index4.html">Move Down</a>
+								<a href="index5.html">Rotate Top</a>
+								<a href="index6.html">Lay Down</a>
+							</nav>
+						</div>
+						<div class="related">
+							<p>If you enjoyed this demo you might also like:</p>
+							<p><a href="http://tympanus.net/Tutorials/AnimatedBorderMenus/">Animated Border Menus</a></p>
+							<p><a href="http://tympanus.net/Development/SidebarTransitions/">Transitions for Off-Canvas Navigations</a></p>
+						</div>
 					</div><!-- /main -->
 				</div><!-- wrapper -->
 			</div><!-- /container -->
-			<nav class="outer-nav right vertical">
-			
-			<?php
-			wp_nav_menu( array( 'theme_location' => 'top', 'container_class' => 'menu' ) );
-			?>
+			<nav class="outer-nav left vertical">
 				<a href="#" class="icon-home">Home</a>
 				<a href="#" class="icon-news">News</a>
 				<a href="#" class="icon-image">Images</a>
@@ -41,20 +63,6 @@ get_header(); ?>
 				<a href="#" class="icon-star">Favorites</a>
 				<a href="#" class="icon-mail">Messages</a>
 				<a href="#" class="icon-lock">Security</a>
-				
-				<?php if ( has_nav_menu( 'social' ) ) : ?>
-							<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'twentysixteen' ); ?>">
-								<?php
-									wp_nav_menu( array(
-										'theme_location' => 'social',
-										'menu_class'     => 'social-links-menu',
-										'depth'          => 1,
-										'link_before'    => '<span class="screen-reader-text">',
-										'link_after'     => '</span>',
-									) );
-								?>
-							</nav><!-- .social-navigation -->
-						<?php endif; ?>
 			</nav>
 		</div><!-- /perspective -->
 <?php get_footer();

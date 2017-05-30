@@ -27,6 +27,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Perspective Page View Navigation</title>
 		<link rel="shortcut icon" href="../favicon.ico">
+				<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load --> 
+		<script src="js/modernizr.custom.25376.js"></script>
 </head>
 
 
